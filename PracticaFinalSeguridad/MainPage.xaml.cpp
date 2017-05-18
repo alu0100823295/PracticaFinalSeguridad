@@ -6,6 +6,8 @@
 #include "pch.h"
 #include "MainPage.xaml.h"
 
+#include "Practicas\Vigenere.h"
+
 using namespace PracticaFinalSeguridad;
 
 using namespace Platform;
@@ -24,4 +26,31 @@ using namespace Windows::UI::Xaml::Navigation;
 MainPage::MainPage()
 {
 	InitializeComponent();
+}
+
+
+void PracticaFinalSeguridad::MainPage::Vig_Enc_Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	Vigenere vig;
+
+	std::wstring m(VigMsg->Text->Data());
+	std::wstring k(VigKey->Text->Data());
+
+	std::wstring enc = vig.encrypt(m, k);
+
+	VigEncMesg->Text = ref new String(enc.c_str());
+
+}
+
+
+void PracticaFinalSeguridad::MainPage::Vig_Dec_Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	Vigenere vig;
+
+	std::wstring m(VigMsg->Text->Data());
+	std::wstring k(VigKey->Text->Data());
+
+	std::wstring enc = vig.decrypt(m, k);
+
+	VigDecMesg->Text = ref new String(enc.c_str());
 }

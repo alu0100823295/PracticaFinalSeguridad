@@ -7,6 +7,18 @@
 //------------------------------------------------------------------------------
 
 
+namespace Windows {
+    namespace UI {
+        namespace Xaml {
+            namespace Controls {
+                ref class Pivot;
+                ref class TextBlock;
+                ref class Button;
+                ref class TextBox;
+            }
+        }
+    }
+}
 
 namespace PracticaFinalSeguridad
 {
@@ -23,6 +35,13 @@ namespace PracticaFinalSeguridad
     private:
         bool _contentLoaded;
     
+        private: ::Windows::UI::Xaml::Controls::Pivot^ rootPivot;
+        private: ::Windows::UI::Xaml::Controls::TextBlock^ VigDecMesg;
+        private: ::Windows::UI::Xaml::Controls::TextBlock^ VigEncMesg;
+        private: ::Windows::UI::Xaml::Controls::Button^ Vig_Enc_Button;
+        private: ::Windows::UI::Xaml::Controls::Button^ Vig_Dec_Button;
+        private: ::Windows::UI::Xaml::Controls::TextBox^ VigMsg;
+        private: ::Windows::UI::Xaml::Controls::TextBox^ VigKey;
     };
 }
 
