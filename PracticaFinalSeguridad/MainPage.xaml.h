@@ -7,6 +7,7 @@
 
 #include "MainPage.g.h"
 
+
 namespace PracticaFinalSeguridad
 {
 	/// <summary>
@@ -17,8 +18,5 @@ namespace PracticaFinalSeguridad
 	public:
 		MainPage();
 
-	private:
-		void Vig_Enc_Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
-		void Vig_Dec_Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 	};
 }

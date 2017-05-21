@@ -11,7 +11,9 @@ namespace Windows {
     namespace UI {
         namespace Xaml {
             namespace Controls {
-                ref class Pivot;
+                ref class TextBlock;
+                ref class Button;
+                ref class TextBox;
             }
         }
     }
@@ -20,7 +22,7 @@ namespace Windows {
 namespace PracticaFinalSeguridad
 {
     [::Windows::Foundation::Metadata::WebHostHidden]
-    partial ref class MainPage : public ::Windows::UI::Xaml::Controls::Page, 
+    partial ref class DHUserControl : public ::Windows::UI::Xaml::Controls::UserControl, 
         public ::Windows::UI::Xaml::Markup::IComponentConnector,
         public ::Windows::UI::Xaml::Markup::IComponentConnector2
     {
@@ -32,7 +34,14 @@ namespace PracticaFinalSeguridad
     private:
         bool _contentLoaded;
     
-        private: ::Windows::UI::Xaml::Controls::Pivot^ rootPivot;
+        private: ::Windows::UI::Xaml::Controls::TextBlock^ K;
+        private: ::Windows::UI::Xaml::Controls::TextBlock^ yb;
+        private: ::Windows::UI::Xaml::Controls::TextBlock^ ya;
+        private: ::Windows::UI::Xaml::Controls::Button^ Button;
+        private: ::Windows::UI::Xaml::Controls::TextBox^ primo;
+        private: ::Windows::UI::Xaml::Controls::TextBox^ alpha;
+        private: ::Windows::UI::Xaml::Controls::TextBox^ xa;
+        private: ::Windows::UI::Xaml::Controls::TextBox^ xb;
     };
 }
 

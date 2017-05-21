@@ -17,12 +17,24 @@
     <ClCompile Include="MainPage.xaml.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="Practicas\Vigenere.cpp" />
+    <ClCompile Include="Practicas\DiffieHellman.cpp" />
+    <ClCompile Include="DHUserControl.xaml.cpp" />
+    <ClCompile Include="VigenereUserControl.xaml.cpp" />
+    <ClCompile Include="Practicas\FiatShamir.cpp" />
+    <ClCompile Include="FiatShamirUserControl.xaml.cpp" />
+    <ClCompile Include="Practicas\RSA.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h" />
     <ClInclude Include="MainPage.xaml.h" />
     <ClInclude Include="Practicas\Vigenere.h" />
+    <ClInclude Include="Practicas\DiffieHellman.h" />
+    <ClInclude Include="DHUserControl.xaml.h" />
+    <ClInclude Include="VigenereUserControl.xaml.h" />
+    <ClInclude Include="Practicas\FiatShamir.h" />
+    <ClInclude Include="FiatShamirUserControl.xaml.h" />
+    <ClInclude Include="Practicas\RSA.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LockScreenLogo.scale-200.png">
@@ -55,5 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml" />
+    <Page Include="VigenereUserControl.xaml" />
+    <Page Include="DHUserControl.xaml" />
+    <Page Include="FiatShamirUserControl.xaml" />
+    <Page Include="RSAUserControl.xaml" />
   </ItemGroup>
 </Project>

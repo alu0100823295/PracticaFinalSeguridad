@@ -7,79 +7,37 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     MinWidth="800"
-    MinHeight="800">
+    MinHeight="800"
+    xmlns:controls="using:PracticaFinalSeguridad">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <Pivot x:Name="rootPivot" Title="Prácticas Seguridad">
+        <Pivot x:Name="rootPivot" Title="Jorge Aguiar Martín">
             <!-- ############## VIGENERE ############## -->
             <PivotItem Header="Vigenere" Margin="0 50 0 0">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="0.25*"/>
-                        <RowDefinition Height="2*"/>
-                    </Grid.RowDefinitions>
 
-                    <Grid Grid.Row="0">
-                        <!-- Zona donde pedir los datos -->
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
+                <!-- VigenereUserControl.xaml -->
+                <controls:VigenereUserControl/>
 
-                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Mensaje a cifrar: " HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Margin="10 0"/>
-                        <TextBox x:Name="VigMsg" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" MinWidth="250" Margin="10 0"/>
-
-                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Clave con la que cifrar: " HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Margin="10 0"/>
-                        <TextBox x:Name="VigKey" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" MinWidth="250" Margin="10 0"/>
-                    </Grid>
-
-                    <Grid Grid.Row="1">
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Button Grid.Column="0" x:Name="Vig_Enc_Button" Click="Vig_Enc_Button_Click" FontSize="26" Margin="100 0" HorizontalAlignment="Right" VerticalAlignment="Center">Cifrar</Button>
-                        <Button Grid.Column="1" x:Name="Vig_Dec_Button" Click="Vig_Dec_Button_Click" FontSize="26" Margin="100 0" HorizontalAlignment="Left" VerticalAlignment="Center">Descifrar</Button>
-
-                    </Grid>
-
-                    <Grid Grid.Row="2">
-                        <!-- Zona donde mostrar el resultado -->
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <TextBlock Text="La cadena cifrada es:" FontSize="24" TextAlignment="Center"/>
-                            <TextBlock x:Name="VigEncMesg" FontSize="28" Text="------" TextAlignment="Center"/>
-                        </StackPanel>
-
-                        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <TextBlock Text="La cadena descifrada es:" FontSize="24" TextAlignment="Center"/>
-                            <TextBlock x:Name="VigDecMesg" FontSize="28" Text="------" TextAlignment="Center"/>
-                        </StackPanel>
-
-                    </Grid>
-
-                </Grid>
             </PivotItem>
-            <PivotItem Header="Pivot Item 2">
-                <!--Pivot content goes here-->
-                <TextBlock Text="Content of pivot item 2."/>
+            <!-- ############## DIFFIE-HELLMAN ############## -->
+            <PivotItem Header="Diffie-Hellman">
+                
+                <!-- Diffie-HellmanUserControl -->
+                <controls:DHUserControl/>
+
             </PivotItem>
-            <PivotItem Header="Pivot Item 3">
-                <!--Pivot content goes here-->
-                <TextBlock Text="Content of pivot item 3."/>
+            <!-- ############## FIAT-SHAMIR ############## -->
+            <PivotItem Header="Fiat-Shamir">
+                
+                <!-- FiatShamirUserControl -->
+                <controls:FiatShamirUserControl/>
+            </PivotItem>
+            <!-- ############## RSA ############## -->
+            <PivotItem Header="RSA">
+
+                <!-- RSAUserControl -->
+                <controls:RSAUserControl/>
             </PivotItem>
         </Pivot>
 

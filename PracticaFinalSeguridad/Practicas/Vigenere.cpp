@@ -51,7 +51,7 @@ std::wstring Vigenere::encrypt(std::wstring str, std::wstring key)
         }
         if ( pos1 == -1 || pos2 == -1 ) {
             std::cout << "No se ha encontrado el caracter" << std::endl;
-            enc_str.clear();
+			enc_str.clear();
             return enc_str;
         }
 

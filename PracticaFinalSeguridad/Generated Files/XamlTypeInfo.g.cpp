@@ -9,11 +9,19 @@
 #include "pch.h"
 #include "XamlTypeInfo.g.h"
 
+#include "DHUserControl.xaml.h"
+#include "FiatShamirUserControl.xaml.h"
 #include "App.xaml.h"
 #include "MainPage.xaml.h"
+#include "RSAUserControl.xaml.h"
+#include "VigenereUserControl.xaml.h"
 #include "XamlBindingInfo.g.hpp"
+#include "DHUserControl.g.hpp"
+#include "FiatShamirUserControl.g.hpp"
 #include "App.g.hpp"
 #include "MainPage.g.hpp"
+#include "RSAUserControl.g.hpp"
+#include "VigenereUserControl.g.hpp"
 
 template<typename T>
 ::Platform::Object^ ActivateType()
@@ -72,11 +80,35 @@ TypeInfo TypeInfos[] =
     0, 0, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
     true,  false, false, false,
     //   2
+    L"PracticaFinalSeguridad.DHUserControl", L"",
+    &ActivateType<::PracticaFinalSeguridad::DHUserControl>, nullptr, nullptr, nullptr,
+    3, // Windows.UI.Xaml.Controls.UserControl
+    0, 0, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
+    true,  false, false, false,
+    //   3
     L"Windows.UI.Xaml.Controls.UserControl", L"",
     nullptr, nullptr, nullptr, nullptr,
     -1,
     0, 0, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
     false, true,  false, false,
+    //   4
+    L"PracticaFinalSeguridad.RSAUserControl", L"",
+    &ActivateType<::PracticaFinalSeguridad::RSAUserControl>, nullptr, nullptr, nullptr,
+    3, // Windows.UI.Xaml.Controls.UserControl
+    0, 0, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
+    true,  false, false, false,
+    //   5
+    L"PracticaFinalSeguridad.VigenereUserControl", L"",
+    &ActivateType<::PracticaFinalSeguridad::VigenereUserControl>, nullptr, nullptr, nullptr,
+    3, // Windows.UI.Xaml.Controls.UserControl
+    0, 0, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
+    true,  false, false, false,
+    //   6
+    L"PracticaFinalSeguridad.FiatShamirUserControl", L"",
+    &ActivateType<::PracticaFinalSeguridad::FiatShamirUserControl>, nullptr, nullptr, nullptr,
+    3, // Windows.UI.Xaml.Controls.UserControl
+    0, 0, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
+    true,  false, false, false,
     //  Last type here is for padding
     L"", L"",
     nullptr, nullptr, nullptr, nullptr,
@@ -123,7 +155,15 @@ UINT TypeInfoLookup[] = {
       2,   //  34
       2,   //  35
       2,   //  36
-      3,   //  37
+      4,   //  37
+      5,   //  38
+      5,   //  39
+      5,   //  40
+      5,   //  41
+      5,   //  42
+      6,   //  43
+      6,   //  44
+      7,   //  45
 };
 
 TypeInfo* GetTypeInfo(::Platform::String^ typeName)

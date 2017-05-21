@@ -32,40 +32,6 @@ void ::PracticaFinalSeguridad::MainPage::Connect(int __connectionId, ::Platform:
                 this->rootPivot = safe_cast<::Windows::UI::Xaml::Controls::Pivot^>(__target);
             }
             break;
-        case 2:
-            {
-                this->VigDecMesg = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(__target);
-            }
-            break;
-        case 3:
-            {
-                this->VigEncMesg = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(__target);
-            }
-            break;
-        case 4:
-            {
-                this->Vig_Enc_Button = safe_cast<::Windows::UI::Xaml::Controls::Button^>(__target);
-                (safe_cast<::Windows::UI::Xaml::Controls::Button^>(this->Vig_Enc_Button))->Click += ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::PracticaFinalSeguridad::MainPage::*)
-                    (::Platform::Object^, ::Windows::UI::Xaml::RoutedEventArgs^))&MainPage::Vig_Enc_Button_Click);
-            }
-            break;
-        case 5:
-            {
-                this->Vig_Dec_Button = safe_cast<::Windows::UI::Xaml::Controls::Button^>(__target);
-                (safe_cast<::Windows::UI::Xaml::Controls::Button^>(this->Vig_Dec_Button))->Click += ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::PracticaFinalSeguridad::MainPage::*)
-                    (::Platform::Object^, ::Windows::UI::Xaml::RoutedEventArgs^))&MainPage::Vig_Dec_Button_Click);
-            }
-            break;
-        case 6:
-            {
-                this->VigMsg = safe_cast<::Windows::UI::Xaml::Controls::TextBox^>(__target);
-            }
-            break;
-        case 7:
-            {
-                this->VigKey = safe_cast<::Windows::UI::Xaml::Controls::TextBox^>(__target);
-            }
-            break;
     }
     _contentLoaded = true;
 }

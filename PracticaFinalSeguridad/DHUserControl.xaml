@@ -1,0 +1,89 @@
+﻿<UserControl
+    x:Class="PracticaFinalSeguridad.DHUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PracticaFinalSeguridad"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0 20 0 0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <!-- Zona donde pedir los datos -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Primo P: " HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Margin="10 0"/>
+            <TextBox x:Name="primo" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" MinWidth="250" Margin="10 0"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Alpha (menor que p): " HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Margin="10 0"/>
+            <TextBox x:Name="alpha" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" MinWidth="250" Margin="10 0"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Secreto Xa: " HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Margin="10 0"/>
+            <TextBox x:Name="xa" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" MinWidth="250" Margin="10 0"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Secreto Xb: " HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Margin="10 0"/>
+            <TextBox x:Name="xb" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" MinWidth="250" Margin="10 0"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" x:Name="Button" Click="Button_Click" FontSize="26" Margin="100 0" HorizontalAlignment="Center" VerticalAlignment="Center">Obtener Clave</Button>
+
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <!-- Zona donde mostrar el resultado -->
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1.5*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+            
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Text="El número intermedio 'Ya' es:" FontSize="24" TextAlignment="Center"/>
+                    <TextBlock x:Name="ya" FontSize="28" Text="------" TextAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Text="El número intermedio 'Yb' es:" FontSize="24" TextAlignment="Center"/>
+                    <TextBlock x:Name="yb" FontSize="28" Text="------" TextAlignment="Center"/>
+                </StackPanel>
+                
+            </Grid>
+
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="La clave compartida es:" FontSize="24" TextAlignment="Center"/>
+                <TextBlock x:Name="K" FontSize="28" Text="------" TextAlignment="Center"/>
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+</UserControl>

@@ -98,6 +98,10 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <PackageCertificateKeyFile>PracticaFinalSeguridad_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxPackageDir>D:\jotamusik\Escritorio\Seguridad\BUILD\</AppxPackageDir>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
@@ -126,7 +130,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
-      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4453;28204;4700</DisableSpecificWarnings>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -136,6 +140,12 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DHUserControl.xaml.h">
+      <DependentUpon>DHUserControl.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="FiatShamirUserControl.xaml.h">
+      <DependentUpon>FiatShamirUserControl.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -143,13 +153,34 @@
     <ClInclude Include="MainPage.xaml.h">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="Practicas\DiffieHellman.h" />
+    <ClInclude Include="Practicas\FiatShamir.h" />
+    <ClInclude Include="Practicas\RSA.h" />
     <ClInclude Include="Practicas\Vigenere.h" />
+    <ClInclude Include="RSAUserControl.xaml.h">
+      <DependentUpon>RSAUserControl.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="VigenereUserControl.xaml.h">
+      <DependentUpon>VigenereUserControl.xaml</DependentUpon>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="DHUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FiatShamirUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RSAUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VigenereUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
@@ -172,6 +203,12 @@
     <ClCompile Include="App.xaml.cpp">
       <DependentUpon>App.xaml</DependentUpon>
     </ClCompile>
+    <ClCompile Include="DHUserControl.xaml.cpp">
+      <DependentUpon>DHUserControl.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="FiatShamirUserControl.xaml.cpp">
+      <DependentUpon>FiatShamirUserControl.xaml</DependentUpon>
+    </ClCompile>
     <ClCompile Include="MainPage.xaml.cpp">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </ClCompile>
@@ -183,7 +220,16 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Practicas\DiffieHellman.cpp" />
+    <ClCompile Include="Practicas\FiatShamir.cpp" />
+    <ClCompile Include="Practicas\RSA.cpp" />
     <ClCompile Include="Practicas\Vigenere.cpp" />
+    <ClCompile Include="RSAUserControl.xaml.cpp">
+      <DependentUpon>RSAUserControl.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="VigenereUserControl.xaml.cpp">
+      <DependentUpon>VigenereUserControl.xaml</DependentUpon>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
